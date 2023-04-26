@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func AddElement(array []interface{}, element interface{}, position string) []interface{} {
+func AddElement(array []int, element int, position string) []int {
 	if position == "up" {
-		newArray := make([]interface{}, len(array)+1)
+		newArray := make([]int, len(array)+1)
 		newArray[0] = element
 		copy(newArray[1:], array)
 		return newArray
@@ -16,7 +16,7 @@ func AddElement(array []interface{}, element interface{}, position string) []int
 }
 
 func main() {
-	array := []interface{}{1, 2, 3, 4, 5}
+	array := []int{1, 2, 3, 4, 5}
 	element := 6
 	position := "up"
 
