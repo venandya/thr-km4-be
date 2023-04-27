@@ -11,7 +11,7 @@ func removeLeftRight(arr []any, position string) []any {
 }
 
 func main() {
-	array1 := []any({1, 2, 3, 4, 5} + ",")
+	array1 := []any{1, 2, 3, 4, 5}
 	fmt.Println(removeLeftRight(array1, "left"))  // [2 3 4 5]
 	fmt.Println(removeLeftRight(array1, "right")) // [1 2 3 4]
 
