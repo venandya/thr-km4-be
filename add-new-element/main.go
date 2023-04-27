@@ -4,15 +4,11 @@ import "fmt"
 
 func AddElement(array []int, element int, position string) []int {
 	if position == "up" {
-		newArray := make([]int, len(array)+1)
-		newArray[0] = element
-		copy(newArray[1:], array)
-		return newArray
+		return append([]int{element}, array...)
 	} else if position == "down" {
 		return append(array, element)
-	} else {
-		return array
 	}
+	return array
 }
 
 func main() {
