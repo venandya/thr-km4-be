@@ -2,24 +2,24 @@ package main
 
 import "fmt"
 
-func AddElement(array []int, element int, position string) []int {
+func AddElement(data []int, newData int, position string) []int {
 	if position == "up" {
-		return append([]int{element}, array...)
+		return append([]int{newData}, data...)
 	} else if position == "down" {
-		return append(array, element)
+		return append(data, newData)
 	}
-	return array
+	return data
 }
 
 func main() {
-	array := []int{1, 2, 3, 4, 5}
-	element := 6
+	data := []int{1, 2, 3, 4, 5}
+	newData := 6
 	position := "up"
 
-	newArray := AddElement(array, element, position)
-	fmt.Println(newArray)
+	n := AddElement(data, newData, position)
+	fmt.Println(n)
 
 	position = "down"
-	newArray = AddElement(array, element, position)
-	fmt.Println(newArray)
+	n = AddElement(data, newData, position)
+	fmt.Println(n)
 }
